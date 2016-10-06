@@ -19,19 +19,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlw-3R-fZb">
-                                <frame key="frameInset" minX="16" minY="471" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Roll the Dice"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="uOt-Ph-XCs">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="74z-tG-MvQ">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="eyK-2g-C17"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-Fv-8iO"/>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ilv-97-qbs">
+                                        <state key="normal" title="Roll the Dice"/>
+                                        <connections>
+                                            <action selector="SingleDieButton:" destination="7Rx-4n-775" eventType="touchUpInside" id="jN9-jd-sNZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uOt-Ph-XCs" firstAttribute="centerY" secondItem="JSK-vX-pE3" secondAttribute="centerY" id="8tp-um-9kg"/>
+                            <constraint firstItem="uOt-Ph-XCs" firstAttribute="centerX" secondItem="JSK-vX-pE3" secondAttribute="centerX" id="eBg-SC-DV2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="2 Dice" id="2pC-z2-RCS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmQ-c6-zLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="-68"/>
+            <point key="canvasLocation" x="1144.8" y="-68.815592203898049"/>
         </scene>
         <!--Single Die-->
         <scene sceneID="805-OI-vX6">

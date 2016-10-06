@@ -14,7 +14,32 @@ class SingleDiceViewController: UIViewController {
     
     @IBAction func SingleDieButton(_ sender: AnyObject) {
         
-        SingleDie.image = UIImage(named:"Dice2")
+//        for _ in 1...5000 {
+//            SingleDie.image = UIImage(named:"Dice1")
+//            SingleDie.image = UIImage(named:"Dice2")
+//            SingleDie.image = UIImage(named:"Dice3")
+//            SingleDie.image = UIImage(named:"Dice4")
+//            SingleDie.image = UIImage(named:"Dice5")
+//            SingleDie.image = UIImage(named:"Dice6")
+//        }
+        
+        let diceRoll = Int(arc4random_uniform(6) + 1)
+        
+        switch diceRoll {
+        case 1:
+            SingleDie.image = UIImage(named:"Dice1")
+        case 2:
+            SingleDie.image = UIImage(named:"Dice2")
+        case 3:
+            SingleDie.image = UIImage(named:"Dice3")
+        case 4:
+            SingleDie.image = UIImage(named:"Dice4")
+        case 5:
+            SingleDie.image = UIImage(named:"Dice5")
+        default:
+            SingleDie.image = UIImage(named:"Dice6")
+        }
+        
     }
     
     
