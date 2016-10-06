@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,7 +36,7 @@
         <!--Single Die-->
         <scene sceneID="805-OI-vX6">
             <objects>
-                <viewController id="7Rx-4n-775" sceneMemberID="viewController">
+                <viewController id="7Rx-4n-775" customClass="SingleDiceViewController" customModule="Dice_Roll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kcc-QF-wlA"/>
                         <viewControllerLayoutGuide type="bottom" id="6ge-sC-OR7"/>
@@ -44,20 +45,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gf1-mp-MBE">
-                                <frame key="frameInset" minX="16" minY="438" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Roll the Die"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8Z-sz-k33">
-                                <frame key="frameInset" minX="67" minY="164" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="WuG-o7-uOM">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="i8Z-sz-k33"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gf1-mp-MBE">
+                                        <state key="normal" title="Roll the Die"/>
+                                        <connections>
+                                            <action selector="SingleDieButton:" destination="7Rx-4n-775" eventType="touchUpInside" id="l01-e0-e3n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WuG-o7-uOM" firstAttribute="leading" secondItem="vwi-1P-5PI" secondAttribute="leadingMargin" constant="132" id="5Fl-8a-gUP"/>
+                            <constraint firstItem="WuG-o7-uOM" firstAttribute="centerY" secondItem="vwi-1P-5PI" secondAttribute="centerY" id="8cs-q3-D3h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WuG-o7-uOM" secondAttribute="trailing" constant="133" id="cpn-CE-ZBL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single Die" id="4mS-I0-p38"/>
+                    <connections>
+                        <outlet property="SingleDie" destination="i8Z-sz-k33" id="Sgm-ES-dRN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8d-SD-t0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,4 +119,7 @@
             <point key="canvasLocation" x="1145" y="636"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dice1" width="70" height="69"/>
+    </resources>
 </document>

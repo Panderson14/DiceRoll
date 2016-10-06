@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SingleDiceViewController.swift
 //  Dice Roll
 //
 //  Created by Patrick Anderson on 10/5/16.
@@ -8,8 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SingleDiceViewController: UIViewController {
 
+    @IBOutlet weak var SingleDie: UIImageView!
+    
+    @IBAction func SingleDieButton(_ sender: AnyObject) {
+        
+        SingleDie.image = UIImage(named:"Dice2")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

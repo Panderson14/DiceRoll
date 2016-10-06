@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F3A3544B2FAB37A9FF5D4136ABC28BD6BC77BB7C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F3A3544B2FAB37A9FF5D4136ABC28BD6BC77BB7C" : 9223372036854775807,
+    "4C9456B4622CC201E2A71D1994B760EBF9E69574" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8622F16F-8644-460C-B052-E76FB49322A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F3A3544B2FAB37A9FF5D4136ABC28BD6BC77BB7C" : "DiceRoll\/",
+    "4C9456B4622CC201E2A71D1994B760EBF9E69574" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Dice Roll",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Dice Roll.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Panderson14\/PHYS2660.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4C9456B4622CC201E2A71D1994B760EBF9E69574"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Panderson14\/DiceRoll.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F3A3544B2FAB37A9FF5D4136ABC28BD6BC77BB7C"
+    }
+  ]
+}
