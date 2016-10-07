@@ -115,7 +115,7 @@
         <!--Coin Flip-->
         <scene sceneID="Wn5-dF-goO">
             <objects>
-                <viewController id="MXH-yU-phH" sceneMemberID="viewController">
+                <viewController id="MXH-yU-phH" customClass="CoinViewController" customModule="Dice_Roll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ala-zj-eHn"/>
                         <viewControllerLayoutGuide type="bottom" id="FUl-rS-5Ma"/>
@@ -124,22 +124,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3un-cp-W2L">
-                                <frame key="frameInset" minX="16" minY="450" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Flip the Coin"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="4bZ-tG-oZN">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heads" translatesAutoresizingMaskIntoConstraints="NO" id="KWd-Qh-LeO"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMX-dX-4Mx">
+                                        <state key="normal" title="Flip the Coin"/>
+                                        <connections>
+                                            <action selector="CoinFlip:" destination="MXH-yU-phH" eventType="touchUpInside" id="Edm-PV-OWs"/>
+                                            <action selector="SingleDieButton:" destination="7Rx-4n-775" eventType="touchUpInside" id="jW9-l7-ejf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4bZ-tG-oZN" firstAttribute="centerY" secondItem="ZLm-LM-ocy" secondAttribute="centerY" id="b87-Dy-Ocs"/>
+                            <constraint firstItem="4bZ-tG-oZN" firstAttribute="centerX" secondItem="ZLm-LM-ocy" secondAttribute="centerX" id="saf-SD-8Nc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Coin Flip" id="31G-8C-7Eo" userLabel="Coin Flip"/>
+                    <connections>
+                        <outlet property="Coin" destination="KWd-Qh-LeO" id="dAy-A8-UjJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMc-v9-hRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="636"/>
+            <point key="canvasLocation" x="1144.8" y="635.53223388305855"/>
         </scene>
     </scenes>
     <resources>
         <image name="Dice1" width="70" height="69"/>
+        <image name="Heads" width="70" height="69"/>
     </resources>
 </document>
