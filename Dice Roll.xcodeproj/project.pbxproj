@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD3B0DCC1DA7396400D0C704 /* DoubleDiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B0DCB1DA7396400D0C704 /* DoubleDiceViewController.swift */; };
 		CDC9199E1DA5EC05003B8355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9199D1DA5EC05003B8355 /* ViewController.swift */; };
 		CDC919A01DA5EC3A003B8355 /* SingleDiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9199F1DA5EC3A003B8355 /* SingleDiceViewController.swift */; };
 		CDFCBB271DA40E8600DC00A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFCBB261DA40E8600DC00A7 /* AppDelegate.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD3B0DCB1DA7396400D0C704 /* DoubleDiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleDiceViewController.swift; sourceTree = "<group>"; };
 		CDC9199D1DA5EC05003B8355 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDC9199F1DA5EC3A003B8355 /* SingleDiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleDiceViewController.swift; sourceTree = "<group>"; };
 		CDFCBB231DA40E8600DC00A7 /* Dice Roll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dice Roll.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 			children = (
 				CDFCBB261DA40E8600DC00A7 /* AppDelegate.swift */,
 				CDFCBB2A1DA40E8600DC00A7 /* Main.storyboard */,
+				CD3B0DCB1DA7396400D0C704 /* DoubleDiceViewController.swift */,
 				CDC9199D1DA5EC05003B8355 /* ViewController.swift */,
 				CDC9199F1DA5EC3A003B8355 /* SingleDiceViewController.swift */,
 				CDFCBB2D1DA40E8600DC00A7 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3B0DCC1DA7396400D0C704 /* DoubleDiceViewController.swift in Sources */,
 				CDC9199E1DA5EC05003B8355 /* ViewController.swift in Sources */,
 				CDFCBB271DA40E8600DC00A7 /* AppDelegate.swift in Sources */,
 				CDC919A01DA5EC3A003B8355 /* SingleDiceViewController.swift in Sources */,

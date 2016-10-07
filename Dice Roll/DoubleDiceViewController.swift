@@ -8,41 +8,49 @@
 
 import UIKit
 
-class SingleDiceViewController: UIViewController {
+class DoubleDiceViewController: UIViewController {
 
-    @IBOutlet weak var SingleDie: UIImageView!
+
+    @IBOutlet weak var FirstDie: UIImageView!
+    @IBOutlet weak var SecondDie: UIImageView!
     
-    @IBAction func SingleDieButton(_ sender: AnyObject) {
+    
+    @IBAction func DiceRoll(_ sender: AnyObject) {
         
-//        for _ in 1...5000 {
-//            SingleDie.image = UIImage(named:"Dice1")
-//            SingleDie.image = UIImage(named:"Dice2")
-//            SingleDie.image = UIImage(named:"Dice3")
-//            SingleDie.image = UIImage(named:"Dice4")
-//            SingleDie.image = UIImage(named:"Dice5")
-//            SingleDie.image = UIImage(named:"Dice6")
-//        }
+        let diceRoll1 = Int(arc4random_uniform(6) + 1)
+        let diceRoll2 = Int(arc4random_uniform(6) + 1)
+
         
-        let diceRoll = Int(arc4random_uniform(6) + 1)
-        
-        switch diceRoll {
+        switch diceRoll1 {
         case 1:
-            SingleDie.image = UIImage(named:"Dice1")
+            FirstDie.image = UIImage(named:"Dice1")
         case 2:
-            SingleDie.image = UIImage(named:"Dice2")
+            FirstDie.image = UIImage(named:"Dice2")
         case 3:
-            SingleDie.image = UIImage(named:"Dice3")
+            FirstDie.image = UIImage(named:"Dice3")
         case 4:
-            SingleDie.image = UIImage(named:"Dice4")
+            FirstDie.image = UIImage(named:"Dice4")
         case 5:
-            SingleDie.image = UIImage(named:"Dice5")
+            FirstDie.image = UIImage(named:"Dice5")
         default:
-            SingleDie.image = UIImage(named:"Dice6")
+            FirstDie.image = UIImage(named:"Dice6")
         }
         
+        switch diceRoll2 {
+        case 1:
+            SecondDie.image = UIImage(named:"Dice1")
+        case 2:
+            SecondDie.image = UIImage(named:"Dice2")
+        case 3:
+            SecondDie.image = UIImage(named:"Dice3")
+        case 4:
+            SecondDie.image = UIImage(named:"Dice4")
+        case 5:
+            SecondDie.image = UIImage(named:"Dice5")
+        default:
+            SecondDie.image = UIImage(named:"Dice6")
+        }
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

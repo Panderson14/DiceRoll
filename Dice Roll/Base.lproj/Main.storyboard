@@ -10,7 +10,7 @@
         <!--2 Dice-->
         <scene sceneID="0iK-wo-BhA">
             <objects>
-                <viewController id="XEM-PT-duy" sceneMemberID="viewController">
+                <viewController id="XEM-PT-duy" customClass="DoubleDiceViewController" customModule="Dice_Roll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tn9-uM-FPg"/>
                         <viewControllerLayoutGuide type="bottom" id="xKd-69-IDp"/>
@@ -30,6 +30,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ilv-97-qbs">
                                         <state key="normal" title="Roll the Dice"/>
                                         <connections>
+                                            <action selector="DiceRoll:" destination="XEM-PT-duy" eventType="touchUpInside" id="2Hl-CF-SYD"/>
                                             <action selector="SingleDieButton:" destination="7Rx-4n-775" eventType="touchUpInside" id="jN9-jd-sNZ"/>
                                         </connections>
                                     </button>
@@ -43,6 +44,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="2 Dice" id="2pC-z2-RCS"/>
+                    <connections>
+                        <outlet property="FirstDie" destination="eyK-2g-C17" id="Wfq-Lu-Gkf"/>
+                        <outlet property="SecondDie" destination="v4h-Fv-8iO" id="QBV-J4-2oJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmQ-c6-zLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
