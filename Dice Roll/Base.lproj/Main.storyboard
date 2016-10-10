@@ -106,6 +106,7 @@
                         <segue destination="7Rx-4n-775" kind="relationship" relationship="viewControllers" id="1zM-lm-OqM"/>
                         <segue destination="XEM-PT-duy" kind="relationship" relationship="viewControllers" id="PII-4A-psG"/>
                         <segue destination="MXH-yU-phH" kind="relationship" relationship="viewControllers" id="r6z-Xj-Pcs"/>
+                        <segue destination="Xfe-Pj-WRZ" kind="relationship" relationship="viewControllers" id="Cxf-bj-0Qz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rp-q8-3X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,6 +152,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMc-v9-hRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1144.8" y="635.53223388305855"/>
+        </scene>
+        <!--Scarne's Dice-->
+        <scene sceneID="wvV-Gh-9ju">
+            <objects>
+                <viewController id="Xfe-Pj-WRZ" userLabel="Scarne's Dice" customClass="CarnesViewController" customModule="Dice_Roll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ixt-qe-jN7"/>
+                        <viewControllerLayoutGuide type="bottom" id="IvM-5h-aWX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XQC-kj-Sc0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-zb-qCo">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="1Cc-Jn-3p3"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="oV8-2g-dOe">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-67-1KZ">
+                                                <state key="normal" title="Roll"/>
+                                                <connections>
+                                                    <action selector="roll:" destination="Xfe-Pj-WRZ" eventType="touchUpInside" id="SBv-u8-mJW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rP-yZ-yQ6">
+                                                <state key="normal" title="Hold"/>
+                                                <connections>
+                                                    <action selector="hold:" destination="Xfe-Pj-WRZ" eventType="touchUpInside" id="J7W-MZ-kQ7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59z-VZ-b8w">
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="reset:" destination="Xfe-Pj-WRZ" eventType="touchUpInside" id="tsP-Ki-HkN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xt4-NW-E9c">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ik-FV-2M6">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHo-fa-Bth">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M4t-yM-pav">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJq-M7-zdv">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiV-cr-tUd">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M4t-yM-pav" firstAttribute="trailing" secondItem="XQC-kj-Sc0" secondAttribute="trailingMargin" id="09L-fn-Eg3"/>
+                            <constraint firstItem="tQq-zb-qCo" firstAttribute="centerX" secondItem="XQC-kj-Sc0" secondAttribute="centerX" id="2Ik-Ya-ogR"/>
+                            <constraint firstItem="xt4-NW-E9c" firstAttribute="top" secondItem="ixt-qe-jN7" secondAttribute="bottom" constant="61" id="Jpl-Ol-NT2"/>
+                            <constraint firstItem="M4t-yM-pav" firstAttribute="top" secondItem="ixt-qe-jN7" secondAttribute="bottom" constant="61" id="gWb-Kl-gSm"/>
+                            <constraint firstItem="tQq-zb-qCo" firstAttribute="centerY" secondItem="XQC-kj-Sc0" secondAttribute="centerY" id="q0j-JC-MrC"/>
+                            <constraint firstItem="xt4-NW-E9c" firstAttribute="leading" secondItem="XQC-kj-Sc0" secondAttribute="leadingMargin" id="wYg-Ob-lYn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scarne's Die" id="fxR-rt-6tk" userLabel="Scarne's Dice"/>
+                    <connections>
+                        <outlet property="cpuDisplay" destination="tiV-cr-tUd" id="yfq-Dr-P4O"/>
+                        <outlet property="dice" destination="1Cc-Jn-3p3" id="xWX-cY-Xes"/>
+                        <outlet property="playerDisplay" destination="LHo-fa-Bth" id="s4g-NH-NyU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sju-n9-iEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154.40000000000001" y="800.14992503748135"/>
         </scene>
     </scenes>
     <resources>
