@@ -16,12 +16,47 @@ class CarnesViewController: UIViewController {
     var cpuBank = 0;
 
 
+
+    @IBOutlet weak var winner: UILabel!
     @IBOutlet weak var dice: UIImageView!
     @IBOutlet weak var playerDisplay: UILabel!
     @IBOutlet weak var cpuDisplay: UILabel!
     
+    func cpu() {
+        while cpuBank < 20 {
+            let diceRoll = Int(arc4random_uniform(6) + 1)
+            switch diceRoll {
+            case 1:
+                cpuBank = 0;
+            case 2:
+                cpuBank += 2;
+            case 3:
+                cpuBank += 3;
+            case 4:
+                cpuBank += 4;
+            case 5:
+                cpuBank += 5;
+            default:
+                cpuBank += 6;
+            }
+            if cpuBank == 0 {
+                break;
+            }
+            if cpuScore + cpuBank >= 100 {
+                winner.text = "The Computer Wins!"
+                break;
+            }
+        }
+        cpuScore += cpuBank;
+        cpuBank = 0;
+        cpuDisplay.text = "\(cpuScore + cpuBank)"
+    }
+    
     
     @IBAction func roll(_ sender: AnyObject) {
+        if winner.text == "You Win!" || winner.text == "The Computer Wins!" {
+            reset(nil)
+        }
         
         let diceRoll = Int(arc4random_uniform(6) + 1)
         
@@ -29,6 +64,7 @@ class CarnesViewController: UIViewController {
         case 1:
             dice.image = UIImage(named:"Dice1")
             playerBank = 0;
+            cpu();
         case 2:
             dice.image = UIImage(named:"Dice2")
             playerBank += 2;
@@ -47,21 +83,31 @@ class CarnesViewController: UIViewController {
         }
         
         playerDisplay.text = "\(playerScore + playerBank)"
+        if playerScore + playerBank >= 100 {
+            winner.text = "You Win!"
+        }
     }
     
     
     @IBAction func hold(_ sender: AnyObject) {
-        playerScore += playerBank;
-        playerBank = 0;
+        if winner.text == "You Win!" || winner.text == "The Computer Wins!" {
+            reset(nil)
+        }
+        else {
+            playerScore += playerBank;
+            playerBank = 0;
+            cpu();
+        }
     }
     
-    @IBAction func reset(_ sender: AnyObject) {
+    @IBAction func reset(_ sender: AnyObject?) {
         playerScore = 0
         playerBank = 0
         cpuScore = 0
         cpuBank = 0
         playerDisplay.text = "\(playerScore + playerBank)"
         cpuDisplay.text = "\(cpuScore + cpuBank)"
+        winner.text = "Scarne's Dice"
     }
     
     

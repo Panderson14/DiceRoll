@@ -220,15 +220,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scarne's Dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tU6-SE-1w9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="WJn-Q6-009"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="M4t-yM-pav" firstAttribute="trailing" secondItem="XQC-kj-Sc0" secondAttribute="trailingMargin" id="09L-fn-Eg3"/>
                             <constraint firstItem="tQq-zb-qCo" firstAttribute="centerX" secondItem="XQC-kj-Sc0" secondAttribute="centerX" id="2Ik-Ya-ogR"/>
+                            <constraint firstItem="tU6-SE-1w9" firstAttribute="centerX" secondItem="tQq-zb-qCo" secondAttribute="centerX" id="DQa-xG-BZW"/>
                             <constraint firstItem="xt4-NW-E9c" firstAttribute="top" secondItem="ixt-qe-jN7" secondAttribute="bottom" constant="61" id="Jpl-Ol-NT2"/>
                             <constraint firstItem="M4t-yM-pav" firstAttribute="top" secondItem="ixt-qe-jN7" secondAttribute="bottom" constant="61" id="gWb-Kl-gSm"/>
                             <constraint firstItem="tQq-zb-qCo" firstAttribute="centerY" secondItem="XQC-kj-Sc0" secondAttribute="centerY" id="q0j-JC-MrC"/>
                             <constraint firstItem="xt4-NW-E9c" firstAttribute="leading" secondItem="XQC-kj-Sc0" secondAttribute="leadingMargin" id="wYg-Ob-lYn"/>
+                            <constraint firstItem="tU6-SE-1w9" firstAttribute="top" secondItem="ixt-qe-jN7" secondAttribute="bottom" constant="18" id="yNr-sb-mZR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scarne's Die" id="fxR-rt-6tk" userLabel="Scarne's Dice"/>
@@ -236,6 +246,7 @@
                         <outlet property="cpuDisplay" destination="tiV-cr-tUd" id="yfq-Dr-P4O"/>
                         <outlet property="dice" destination="1Cc-Jn-3p3" id="xWX-cY-Xes"/>
                         <outlet property="playerDisplay" destination="LHo-fa-Bth" id="s4g-NH-NyU"/>
+                        <outlet property="winner" destination="tU6-SE-1w9" id="sd4-h4-grw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sju-n9-iEj" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,6 +15,10 @@ class ViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.selectedIndex = 2
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
